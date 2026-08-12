@@ -1,6 +1,8 @@
+use std::io;
+
 mod utils;
 
-fn main() {
-    println!("Hello, world!");
-    utils::seed::generate_log_files();
+fn main() -> io::Result<()> {
+    utils::par_aggergator::execute()?;
+    Ok(())
 }
